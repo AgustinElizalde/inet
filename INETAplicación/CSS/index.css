@@ -1,0 +1,258 @@
+/* ===== fuente MONTSERRAT ===== */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+/* ===== VARIABLES ===== */
+
+:root {
+
+    /* === COLORES === */
+
+    --cuerpo-color: #E4E9F7;
+    --sidebar-color: #FFFfff;
+    --color-texto: #000000;
+    --color-texto-secu: #969290;
+    --color-primario: #0E68AF;
+    --color-primario-hover: #0B49A5;
+    --color-secundario: #FF4D4D;
+    --color-secundario-hover: #A60C0C;
+    --color-header: #75B2D1;
+    --color-tabla: #F6F9FC;
+    --color-borde: #DDDDDD;
+    --color-tabla: #EEE;
+    --color-form: #F3F4F7;
+
+    /* === COLORES ALERTAS === */
+
+    --correcto: #0ABF30;
+    --error: #E24D4C;
+
+    /* === TRANSICIONES === */
+
+    --tran-hover01: 0.2s ease;
+    --tran-hover02: 0.3s ease;
+    --tran-hover03: 0.4s ease;
+    --tran-hover04: 0.5s ease;
+    --tran-hover05: 0.5s ease;
+
+    /* === TAMAÑO FUENTE === */
+
+    --texto-normal: 16px;
+    --titulo: 24px;
+    --subtitulo: 22px;
+    --texto-icono: 20px;
+
+}
+
+/* ===== CUERPO ===== */
+
+* {
+
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    list-style: none;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+body {
+
+    background-color: var(--cuerpo-color);
+    height: 100vh;
+
+}
+
+/* ===== Sidebar MENÚ ===== */
+
+.sidebar {
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 65px;
+    padding: 10px 14px;
+    background-color: var(--sidebar-color);
+    transition: var(--tran-hover05);
+    z-index: 2;
+
+}
+
+.sidebar.close {
+
+    width: 250px;
+
+}
+
+.sidebar.close .text {
+
+    opacity: 1;
+
+}
+
+.sidebar li {
+
+    height: 50px;
+    margin-top: 10px;
+    list-style: none;
+    display: flex;
+    align-items: center;
+
+}
+
+.sidebar li a {
+
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    transition: var(--tran-hover04);
+    border-radius: 6px;
+
+}
+
+.sidebar li a:hover {
+
+    background: var(--color-primario);
+
+}
+
+.sidebar li .icon {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 60px;
+    font-size: var(--texto-icono);
+
+}
+
+.sidebar li .icon,
+.sidebar li .text {
+
+    color: var(--color-texto);
+
+}
+
+.nav-link-active i.icon,
+.nav-link-active span.nav-text {
+
+  color: var(--color-primario); 
+
+}
+
+.sidebar li a:hover .icon,
+.sidebar li a:hover .text {
+
+    color: var(--sidebar-color);
+    transition: var(--tran-hover02);
+}
+
+.sidebar .image-text img {
+
+    width: 40px;
+    border-radius: 6px;
+
+}
+
+.sidebar header {
+
+    position: relative;
+
+}
+
+.sidebar header .image-text {
+
+    display: flex;
+    align-items: center;
+
+}
+
+.sidebar .text {
+
+    font-size: var(--color-texto);
+    transition: var(--tran-hover03);
+    white-space: nowrap;
+    opacity: 0;
+
+}
+
+.sidebar .image {
+
+    min-width: 60px;
+    display: flex;
+    align-items: center;
+
+}
+
+.sidebar header .toggle {
+
+    position: absolute;
+    top: 50%;
+    right: -25px;
+    transform: translateY(-50%) rotate(180deg);
+    background: var(--color-primario);
+    height: 35px;
+    width: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: var(--sidebar-color);
+    font-size: 22px;
+    cursor: pointer;
+    transition: var(--tran-hover04);
+
+}
+
+.sidebar.close header .toggle {
+
+    transform: translateY(-50%);
+
+}
+
+header .image-text .header-text {
+
+    display: flex;
+    flex-direction: column;
+
+}
+
+.header-text .name {
+
+    font-weight: bold;
+
+}
+
+.header-text .city {
+
+    font-weight: lighter;
+    color: var(--color-texto);
+
+}
+
+.sidebar .menu-bar {
+
+    height: calc(100% - 65px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+/* MAPA LEAFJS */
+
+#map { 
+
+    height: 80%;
+    width: 45%; 
+    margin-left: 30%;
+    margin-top: 50px;
+    border-radius: 22px;
+    align-items: center;
+
+}
